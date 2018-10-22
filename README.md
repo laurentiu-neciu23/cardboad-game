@@ -19,31 +19,23 @@
      Grupa: 343C5<br>
      Rol: Developer<br>
 
-  4. Nume: Neciu
-     
-     Prenume: Laurentiu
-     
-     Grupa: 343C5
-     
-     Rol: Developer
+  4. Nume: Neciu<br>
+     Prenume: Laurentiu<br>
+     Grupa: 343C5<br>
+     Rol: Developer<br>
 
-  5. Nume: Mirescu
-  
-     Prenume: Andreea
-  
-     Grupa: 343C5
-  
-     Rol: TeamLead
+  5. Nume: Mirescu<br>
+     Prenume: Andreea<br>
+     Grupa: 343C5<br>
+     Rol: TeamLead<br>
 
-  6. Nume: Bardac
-  
-     Prenume: Diana
-  
-     Grupa: 343C5
-  
-     Rol: QA
+  6. Nume: Bardac<br>
+     Prenume: Diana<br>
+     Grupa: 343C5<br>
+     Rol: QA<br>
 
 #### Limbaje si tehnologii folosite
-    1. Unity
-    2. C#
+
+1. Unity
+2. C#
 
