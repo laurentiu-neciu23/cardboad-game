@@ -1,7 +1,7 @@
-Proiect MPS === Cardboard Game ===
-Copyright 2018 Hawks CS
+# Proiect MPS === Cardboard Game ===
+## Copyright 2018 Hawks CS
 
-NumeEchipa: Hawks
+#### NumeEchipa: Hawks
   Nume: Tolea
   Prenume: Cristiana
   Grupa: 342C5
