@@ -1,21 +1,23 @@
-# Proiect MPS === Cardboard Game ===
-## Copyright 2018 Hawks CS
+# === Cardboard Game ===
+
+## Hawks CS
 
 #### NumeEchipa: Hawks
-  Nume: Tolea
-  Prenume: Cristiana
-  Grupa: 342C5
-  Rol: ProjectManager
+  
+  1. Nume: Tolea
+     Prenume: Cristiana
+     Grupa: 342C5
+     Rol: ProjectManager
 
-  Nume: Bouleanu
-  Prenume: Bianca
-  Grupa: 343C5
-  Rol: Developer
+  2. Nume: Bouleanu
+     Prenume: Bianca
+     Grupa: 343C5
+     Rol: Developer
 
-  Nume: Pirvan
-  Prenume: Daniel
-  Grupa: 343C5
-  Rol: Developer
+  3. Nume: Pirvan
+     Prenume: Daniel
+     Grupa: 343C5
+     Rol: Developer
 
   Nume: Neciu
   Prenume: Laurentiu
