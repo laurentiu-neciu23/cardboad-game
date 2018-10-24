@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f73dfb9dab0b5c4e9e82177ec899042, type: 3}
+  m_Name: Harry Maguire
+  m_EditorClassIdentifier: 
+  PlayerName: Harry Maguire
+  AttackPoints: 3
+  DefensePoints: 7
+  Description: Defensiv e putin mai slabut, dar poate da oricand gol prin alonja sa
+    deosebita.
+  Team: Anglia
+  position: F
+  artwork: {fileID: 21300000, guid: 1666ac1bfa0401641825b819daa1b0a3, type: 3}
