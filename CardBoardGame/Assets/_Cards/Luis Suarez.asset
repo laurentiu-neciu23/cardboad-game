@@ -17,4 +17,4 @@ MonoBehaviour:
   Description: Capabil sa dea gol in orice poarta sau sa muste din orice adversar
   Team: Uruguay
   position: A
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: 948153940eb904c448906263516cfbc5, type: 3}

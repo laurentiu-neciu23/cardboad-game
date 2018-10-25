@@ -17,4 +17,4 @@ MonoBehaviour:
   Description: Noua minune a fotbalului, golul e specialitatea lui
   Team: Franta
   position: A
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: 35ecc09d63c2d97458b4c1e5ca070fe2, type: 3}

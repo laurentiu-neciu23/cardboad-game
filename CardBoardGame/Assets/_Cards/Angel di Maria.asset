@@ -17,4 +17,4 @@ MonoBehaviour:
   Description: Un alt jucator cu probleme de moral.
   Team: Argentina
   position: A
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: b9c955cf5f8f314468d93f6fbc6b0ca6, type: 3}

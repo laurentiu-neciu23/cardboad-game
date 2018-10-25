@@ -18,4 +18,4 @@ MonoBehaviour:
     si defensiva.'
   Team: Portugalia
   position: M
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: f779ba8546a4ea446abe630b5ce9567a, type: 3}

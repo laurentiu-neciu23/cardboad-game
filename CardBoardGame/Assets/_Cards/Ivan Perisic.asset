@@ -17,4 +17,4 @@ MonoBehaviour:
   Description: Nu exceleaza, dar e un jucator perfect pentru intreaga echipa
   Team: Croatia
   position: A
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: 01671ff10c7edd744994da4209acd53a, type: 3}

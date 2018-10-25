@@ -17,4 +17,4 @@ MonoBehaviour:
   Description: Capabil sa dea gol cu orice fundas advers aflat pe urmele sale
   Team: Belgia
   position: A
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: 3557b84449183244cabd00601329d8e3, type: 3}

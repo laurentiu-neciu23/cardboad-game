@@ -17,4 +17,4 @@ MonoBehaviour:
   Description: El e omul care poate trage dupa el toti coechipierii pe plan ofensiv
   Team: Anglia
   position: A
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: f0b747ba47e87674f8997ec9468b7c67, type: 3}

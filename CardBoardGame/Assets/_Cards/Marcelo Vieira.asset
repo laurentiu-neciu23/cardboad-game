@@ -18,4 +18,4 @@ MonoBehaviour:
     cu driblingurile si pasele lui
   Team: Brazilia
   position: F
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: 136e512f28545cc4987b9ad0c262db6f, type: 3}

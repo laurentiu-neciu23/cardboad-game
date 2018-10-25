@@ -17,4 +17,4 @@ MonoBehaviour:
   Description: Un distrugator pentru ofensivele adverse
   Team: Franta
   position: M
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: d6e6067bc3053c145b7ac4a05f0b953e, type: 3}

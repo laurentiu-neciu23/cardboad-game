@@ -12,12 +12,19 @@ public class CardDisplay : MonoBehaviour {
     public Text Team;
     public Image artwork;
     public Image template;
+    public Image type_icon;
 
-    public PlayerCard card;
 
     public Sprite templateA;
     public Sprite templateM;
     public Sprite templateF;
+
+    public Sprite iconA;
+    public Sprite iconM;
+    public Sprite iconF;
+
+    [Header("Card info to be displayed:")]
+    public PlayerCard card;
 
     // Use this for initialization
     void Start () {
@@ -29,12 +36,14 @@ public class CardDisplay : MonoBehaviour {
 
     private void Update()
     {
-        UpdateDisplay();
+        UpdateDisplay(); // does this every frame, not efficient
     }
 
 
     public void UpdateDisplay()
     {
+        ChooseTemplate();
+        artwork.sprite = card.artwork; // do we need this here? prolly not
         Name.text = card.PlayerName;
         Attack.text = card.AttackPoints.ToString();
         Defense.text = card.DefensePoints.ToString();
@@ -45,10 +54,19 @@ public class CardDisplay : MonoBehaviour {
     public void ChooseTemplate()
     {
         if (card.position == "A")
+        {
             template.sprite = templateA;
+            type_icon.sprite = iconA;
+        }
         if (card.position == "M")
+        {
             template.sprite = templateM;
+            type_icon.sprite = iconM;
+        }
         if (card.position == "F")
+        {
             template.sprite = templateF;
+            type_icon.sprite = iconF;
+        }
     }
 }
