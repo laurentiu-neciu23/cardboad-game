@@ -10,11 +10,20 @@ public class CardDisplay : MonoBehaviour {
     public Text Name;
     public Text Description;
     public Text Team;
+    public Image artwork;
+    public Image template;
 
     public PlayerCard card;
 
-	// Use this for initialization
-	void Start () {
+    public Sprite templateA;
+    public Sprite templateM;
+    public Sprite templateF;
+
+    // Use this for initialization
+    void Start () {
+        if(card.artwork!=null)
+            artwork.sprite = card.artwork;
+        ChooseTemplate();
         UpdateDisplay();
 	}
 
@@ -31,5 +40,15 @@ public class CardDisplay : MonoBehaviour {
         Defense.text = card.DefensePoints.ToString();
         Description.text = card.Description;
         Team.text = card.Team;
+    }
+
+    public void ChooseTemplate()
+    {
+        if (card.position == "A")
+            template.sprite = templateA;
+        if (card.position == "M")
+            template.sprite = templateM;
+        if (card.position == "F")
+            template.sprite = templateF;
     }
 }

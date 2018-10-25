@@ -297,8 +297,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 78
+    m_Font: {fileID: 12800000, guid: c1da00845d4c7ed4faa4bcd2a3232661, type: 3}
+    m_FontSize: 68
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -330,7 +330,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4b7786dded29e0345b28b49728d9a55d, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -467,7 +467,12 @@ MonoBehaviour:
   Name: {fileID: 114161274636361172}
   Description: {fileID: 114152650483990770}
   Team: {fileID: 114941236887907976}
-  card: {fileID: 11400000, guid: 3a2ebb5d17057d04eaac935676cca9dd, type: 2}
+  artwork: {fileID: 114593706946917964}
+  template: {fileID: 114721453219108348}
+  card: {fileID: 11400000, guid: c85771b28fe0b1244abde5ffcbe545f3, type: 2}
+  templateA: {fileID: 21300000, guid: 75dc87b810edddb4fa23ac954cfdcd03, type: 3}
+  templateM: {fileID: 21300000, guid: c7c2633e6a95df64586bbad9964bfada, type: 3}
+  templateF: {fileID: 21300000, guid: 956c6eba32861284fa454579c9a78894, type: 3}
 --- !u!114 &114941236887907976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -488,7 +493,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4b7786dded29e0345b28b49728d9a55d, type: 3}
     m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
