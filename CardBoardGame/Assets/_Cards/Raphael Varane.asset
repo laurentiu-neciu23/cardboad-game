@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f73dfb9dab0b5c4e9e82177ec899042, type: 3}
+  m_Name: Raphael Varane
+  m_EditorClassIdentifier: 
+  PlayerName: Raphael Varane
+  AttackPoints: 2
+  DefensePoints: 10
+  Description: Un fundas cu o experienta vasta, la cei doar 24 de ani.Nu exceleaza
+    cu ceva anume, e doar foarte bun
+  Team: Franta
+  position: F
+  artwork: {fileID: 0}
