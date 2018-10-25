@@ -206,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 1719653728530614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.055, y: 0.055, z: 0.055}
   m_Children:
   - {fileID: 224638350037634994}
   m_Father: {fileID: 0}
@@ -486,10 +486,14 @@ MonoBehaviour:
   Team: {fileID: 114941236887907976}
   artwork: {fileID: 114593706946917964}
   template: {fileID: 114721453219108348}
+  type_icon: {fileID: 114935767917933698}
   templateA: {fileID: 21300000, guid: cd64fb447709ab34285240a688d03ce8, type: 3}
   templateM: {fileID: 21300000, guid: 597de063925302947a28f2bde1c27840, type: 3}
   templateF: {fileID: 21300000, guid: 050ad634ccfe89944b540db41bc3626e, type: 3}
-  card: {fileID: 11400000, guid: a6577aa2574be52449cb4232478d5817, type: 2}
+  iconA: {fileID: 21300000, guid: 6c261ee7fc699ee4aa332b05585ef600, type: 3}
+  iconM: {fileID: 21300000, guid: d3dd03dcfdca7c24e8a0a23815889eb7, type: 3}
+  iconF: {fileID: 21300000, guid: ee487d214fe52304fb262b3b06e911ad, type: 3}
+  card: {fileID: 11400000, guid: aacca9ff82d381c48b6b8650a635d671, type: 2}
 --- !u!114 &114935767917933698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -684,7 +688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 472, y: 770}
+  m_AnchoredPosition: {x: 477.4, y: 822}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224230634064565412
