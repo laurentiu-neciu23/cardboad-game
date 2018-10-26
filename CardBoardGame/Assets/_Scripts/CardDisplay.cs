@@ -69,4 +69,9 @@ public class CardDisplay : MonoBehaviour {
             type_icon.sprite = iconF;
         }
     }
+
+    public void AssignCard(PlayerCard _card)
+    {
+        card = _card;
+    }
 }

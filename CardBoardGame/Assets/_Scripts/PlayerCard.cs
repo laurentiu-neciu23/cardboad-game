@@ -20,13 +20,14 @@ public class PlayerCard : ScriptableObject {
     public Sprite artwork;
 
 
-	// Use this for initialization
 	void TakeAttack (int amount) {
         AttackPoints -= amount;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }
