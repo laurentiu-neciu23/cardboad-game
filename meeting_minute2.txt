@@ -1,0 +1,34 @@
+* Discutie despre stadiul actual al implementarii
+* 22.10.2018 16:30
+
+===== Agendă =====
+
+* Prezentarea de catre fiecare membru a partii lucrate
+* Discutii despre documentatia proiectului
+* Stabilirea a ce mai trebuie implementat
+
+===== Participanți =====
+
+* Tolea Cristiana
+* Mirescu Andreea Alexandra
+* Neciu Laurentiu Florin
+* Pirvan Daniel
+* Bouleanu Oana Bianca
+* Bardac Diana
+
+
+===== Discuții =====
+
+* PD: Am realizat design-ul template-urilor pentru toate tipurile de carti. Am
+realizat layout-ul tablei de joc
+* NL: Am realizat plasarea cartilor pe tabla de joc si conectarea la internet a jocului pentru a crea un joc intre 2 jucatori
+* BOB: Am introdus informatiile jucatorilor necesare pentru realizarea cartilor
+* MA: Pe baza regulilor stabilite am redactat o parte a documentului SDD
+* BD: Am urmarit implementarea jocului si am propus diverse imbunatatiri ale interfetei si, de asemenea am ajutat la redactarea documentului SDD
+* TC: Am urmarit buna desfasurare a lucrului in echipa si am ajutat la redactarea documentului SDD.
+
+===== Decizii/concluzii =====
+
+* Finalizarea implementarii tuturor functionalitatilor proiectului
+* Testarea jocului atunci cand implementarea este completa
+* Rezolvarea posibilelor bug-uri care au aparut pe parcursul testarii
