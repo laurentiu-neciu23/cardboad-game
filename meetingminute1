@@ -1,0 +1,39 @@
+* Stabilirea detaliilor de implementare
+* 15.10.2018, 30 minute 
+
+===== Agendă =====
+
+* Cunoasterea echipei
+* Clarificare cerinte proiect
+* Stabilire tehnologii folosite
+* Desemnare roluri
+* Creare mediu de lucru pentru proiect(repo, trello etc.)
+* Stabilire numar de carti, alegere carti functionale
+* Impartire taskuri
+
+===== Participanți =====
+
+* Tolea Delia-Livia-Cristiana
+* Bouleanu Oana-Bianca
+* Ionescu Laurentiu Florin
+* Pirvan Daniel
+* Birdac Diana
+* Mirescu Andreea Alexandra
+
+===== Discuții =====
+
+* Prima data am stabilit echipa de dev(Bianca, Laurentiu, Daniel), Diana s-a oferit sa fie tester, Andreea a vrut sa fie team leader si Cristiana project manager.
+* Cu totii am fost de acord sa pozitionam cartile pe teren strict in functie de pozitia fotbalistului(atacantul doar pe linia de atac s.a.m.d.)
+* PM-ul a propus sa fie 58 de carti de personaje, 6 de tip lider si minim 8 functionale. 
+* Daniel a propus modul de calculare a scorului dupa cum urmeaza:
+    - pe linia de atac se vor aduna doar punctele de atac
+    - pe linia de mijloc se vor aduna ambele tipuri de puncte
+    - pe linia de aparare se vor aduna doar punctele de aparare 
+  Scorul final reprezinta suma punctelor celor trei linii.
+
+===== Decizii/concluzii =====   
+
+* Realizare SDD
+* Toata lumea era fericita! :) 
+* Realizarea cartilor pana la urmatoarea intalnire.
+
