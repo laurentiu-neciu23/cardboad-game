@@ -106,6 +106,8 @@ GameObject:
   - component: {fileID: 224061342772804830}
   - component: {fileID: 114858896683389558}
   - component: {fileID: 114965258911178212}
+  - component: {fileID: 114053965895209842}
+  - component: {fileID: 225747383533483390}
   m_Layer: 0
   m_Name: PlayerCard_Prefab
   m_TagString: Untagged
@@ -248,6 +250,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114053965895209842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1719653728530614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778690e04ef9c094088eea09e37640ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentToReturn: {fileID: 0}
+  transformData: 0
+  goodScale: {x: 0.16, y: 0.16, z: 1}
+  goodRotation: {x: 10, y: 0, z: 0}
 --- !u!114 &114088917894186354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -691,7 +708,7 @@ RectTransform:
   m_Children:
   - {fileID: 224638350037634994}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -851,3 +868,14 @@ RectTransform:
   m_AnchoredPosition: {x: -467, y: 285}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &225747383533483390
+CanvasGroup:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1719653728530614}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
