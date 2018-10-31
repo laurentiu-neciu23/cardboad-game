@@ -46,9 +46,20 @@ public class PlayerInfo : NetworkBehaviour
 
     private PlayerCard[] fetchDataFromBundle() {
 
-        AssetBundle asb = AssetBundle.LoadFromFile(Path.Combine(Application.dataPath, "AssetBundles/cards"));
-        PlayerCard[] playerCards = asb.LoadAllAssets<PlayerCard>();
-        asb.Unload(false);
+        AssetBundle asb = null;
+        PlayerCard[] playerCards = null;
+        try
+        {
+            asb = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "AssetBundles/cards"));
+            playerCards = asb.LoadAllAssets<PlayerCard>();
+
+        }
+        catch (System.Exception e)
+        {
+            playerCards = Resources.FindObjectsOfTypeAll<PlayerCard>();
+
+        }
+
 
         return playerCards;
     }

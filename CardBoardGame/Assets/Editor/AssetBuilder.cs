@@ -20,7 +20,7 @@ public class AssetBuilder :Editor {
         buildMap[0].assetBundleName = "cards";
         buildMap[0].assetNames = Tdata;
 
-        AssetBundleManifest manifest = BuildPipeline.BuildAssetBundles(@"C:\Unity\remote\cardboad-game\CardBoardGame\AssetBundles",
+        AssetBundleManifest manifest = BuildPipeline.BuildAssetBundles(@"C:\Unity\remote\cardboad-game\CardBoardGame\Assets\StreamingAssets\AssetBundles",
                                 buildMap,
                                 BuildAssetBundleOptions.ChunkBasedCompression,
                                 BuildTarget.StandaloneWindows64);
