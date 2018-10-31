@@ -34,10 +34,17 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
+    private GameObject getDropZone() {
+        return null;        
+    }
+
+
     public void OnDrag(PointerEventData eventData)
     {
 
         GameObject dropZone = GameObject.Find("WorldCanvas/Me_M_Panel");
+
+
         Image imageComponent = dropZone.GetComponent<Image>();
         Color color = imageComponent.color;
         color.a = 1.0f;

@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 3287739615
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: cards
+      Dependencies: {}

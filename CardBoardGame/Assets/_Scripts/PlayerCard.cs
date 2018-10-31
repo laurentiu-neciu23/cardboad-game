@@ -24,6 +24,23 @@ public class PlayerCard : ScriptableObject {
         AttackPoints -= amount;
 	}
 
+    bool isAtacant() {
+        if (position == "A")
+            return true;
+        return false;
+    }
+
+    bool isMijlocas() {
+        if (position == "M")
+            return true;
+        return false;
+    }
+
+    bool isFundas() {
+        if (position == "F")
+            return true;
+        return false;
+    }
 
 
     // Update is called once per frame

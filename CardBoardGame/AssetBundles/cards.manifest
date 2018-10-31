@@ -1,0 +1,79 @@
+ManifestFileVersion: 0
+CRC: 3135740549
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 09403c4918671cc42869c84177bafb93
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6728fd6c5b23b7dc23d62f8d23f0e32a
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4f73dfb9dab0b5c4e9e82177ec899042, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/_Cards/Ivan Rakitic.asset
+- Assets/_Cards/Mario Mandzukic.asset
+- Assets/_Cards/Cristiano Ronaldo.asset
+- Assets/_Cards/Medhi Benatia.asset
+- Assets/_Cards/Paul Pogba.asset
+- Assets/_Cards/Neymar Junior.asset
+- Assets/_Cards/Toni Kroos.asset
+- Assets/_Cards/Christian Eriksen.asset
+- Assets/_Cards/Sergio Ramos.asset
+- Assets/_Cards/Mats Hummels.asset
+- Assets/_Cards/Kylian Mbappe.asset
+- Assets/_Cards/Casemiro.asset
+- Assets/_Cards/Aleksandr Golovin.asset
+- Assets/_Cards/Ivan Perisic.asset
+- Assets/_Cards/Benjamin Pavard.asset
+- Assets/_Cards/N'Golo Kante.asset
+- Assets/_Cards/Gerard Pique.asset
+- Assets/_Cards/Lionel Messi.asset
+- Assets/_Cards/Thomas Muller.asset
+- Assets/_Cards/Romelu Lukaku.asset
+- Assets/_Cards/Eden Hazard.asset
+- Assets/_Cards/Ricardo Quaresma.asset
+- Assets/_Cards/Lucas Hernandez.asset
+- Assets/_Cards/Nemanja Matic.asset
+- Assets/_Cards/Diego Godin.asset
+- Assets/_Cards/Robert Lewandowski.asset
+- Assets/_Cards/Sergio Busquets.asset
+- Assets/_Cards/Mesut Ozil.asset
+- Assets/_Cards/Marcelo Vieira.asset
+- Assets/_Cards/Isco.asset
+- Assets/_Cards/Andreas Granqvist.asset
+- Assets/_Cards/Heung Min Son.asset
+- Assets/_Cards/Philippe Coutinho.asset
+- Assets/_Cards/William da Silva.asset
+- Assets/_Cards/Gylfi Sigurdsson.asset
+- Assets/_Cards/Angel di Maria.asset
+- Assets/_Cards/Luka Modric.asset
+- Assets/_Cards/Mohamed Salah.asset
+- Assets/_Cards/David Silva.asset
+- Assets/_Cards/Kevin de Bruyne.asset
+- Assets/_Cards/Olivier Giroud.asset
+- Assets/_Cards/Paulinho.asset
+- Assets/_Cards/Edinson Cavani.asset
+- Assets/_Cards/Dries Mertens.asset
+- Assets/_Cards/Raphael Varane.asset
+- Assets/_Cards/Harry Maguire.asset
+- Assets/_Cards/Blaise Matuidi.asset
+- Assets/_Cards/Kalidou Koulibaly.asset
+- Assets/_Cards/Diego Costa.asset
+- Assets/_Cards/Takashi Inui.asset
+- Assets/_Cards/Xherdan Shaqiri.asset
+- Assets/_Cards/Thiago Silva.asset
+- Assets/_Cards/Samuel Umtiti.asset
+- Assets/_Cards/Domagoj Vida.asset
+- Assets/_Cards/Pepe.asset
+- Assets/_Cards/Luis Suarez.asset
+- Assets/_Cards/Harry Kane.asset
+- Assets/_Cards/Antoine Griezmann.asset
+Dependencies: []

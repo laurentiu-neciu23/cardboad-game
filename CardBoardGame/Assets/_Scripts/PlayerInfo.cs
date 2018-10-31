@@ -18,14 +18,12 @@ public class PlayerInfo : NetworkBehaviour
     void Start()
     {
         // Fetch all card assets
-        playerCardsInHand = GetAtPath<PlayerCard>("_Cards");
+        playerCardsInHand = fetchDataFromBundle();
         reshuffle(playerCardsInHand);
 
         GenerateCards();
         SetDropZone();
-
     }
-
     [Command]
     public void CmdSpawnNetworkCard()
     {
@@ -46,6 +44,15 @@ public class PlayerInfo : NetworkBehaviour
     }
 
 
+    private PlayerCard[] fetchDataFromBundle() {
+
+        AssetBundle asb = AssetBundle.LoadFromFile(Path.Combine(Application.dataPath, "AssetBundles/cards"));
+        PlayerCard[] playerCards = asb.LoadAllAssets<PlayerCard>();
+        asb.Unload(false);
+
+        return playerCards;
+    }
+
 
     private void reshuffle(Object[] data)
     {
@@ -56,30 +63,6 @@ public class PlayerInfo : NetworkBehaviour
             data[t] = data[r];
             data[r] = aux;
         }
-    }
-    public static T[] GetAtPath<T>(string path)
-    {
-
-        ArrayList al = new ArrayList();
-        string[] fileEntries = Directory.GetFiles(Application.dataPath + "/" + path);
-        foreach (string fileName in fileEntries)
-        {
-            char[] delimiterChars = { '\\' };
-
-            string[] arr = fileName.Split(delimiterChars);
-            string finalFileName = arr[arr.Length - 1];
-            string localFileName = "Assets/" + path + "/" + finalFileName;
-
-            Object t = AssetDatabase.LoadAssetAtPath(localFileName, typeof(T));
-
-            if (t != null)
-                al.Add(t);
-        }
-        T[] result = new T[al.Count];
-        for (int i = 0; i < al.Count; i++)
-            result[i] = (T)al[i];
-
-        return result;
     }
 
     void GenerateCards()
