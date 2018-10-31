@@ -5,7 +5,7 @@ using UnityEngine;
 public class NetworkCard : MonoBehaviour {
 
     public string typeOfCard;
-    public PlayerInfo player = null;
+    public GameObject player = null;
     public GameObject playerCard = null;
     public Quaternion goodRotation = Quaternion.Euler(0f, 0f, 0f);
     public Vector3 goodScale = new Vector3(0.055f, 0.055f, 0.1f);
@@ -16,7 +16,8 @@ public class NetworkCard : MonoBehaviour {
         if (player == null)
             return;
 
-        if (player.isLocalPlayer) {
+        if (player.GetComponent<PlayerInfo>().isLocalPlayer) {
+            Debug.Log("Hello I am the player and I put card down birb");
             GameObject parent = GameObject.Find("WorldCanvas/Me_M_Panel/Grid");
             GameObject card = Instantiate(playerCard);
 

@@ -8,7 +8,7 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
     private float normalScale = 0.16f;
     private double normalRotation = 10;
-    public PlayerInfo currentPlayer = null;
+    public PlayerInfo currentPlayer;
 
 
     public void OnDrop(PointerEventData eventData)
@@ -16,8 +16,7 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         GameObject pointerDrag = eventData.pointerDrag;
 
         if (pointerDrag != null) {
-            currentPlayer.playerCardToSpawn = pointerDrag;
-            currentPlayer.CmdSpawnNetworkCard();
+            currentPlayer.CmdSpawnNetworkCard(pointerDrag.GetComponent<CardDisplay>().Name.text, currentPlayer.netId.Value);
         }
 
         

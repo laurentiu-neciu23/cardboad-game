@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311fdd3a1ae350947869a5d1c247865b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typeOfCard: 
   player: {fileID: 0}
   playerCard: {fileID: 0}
   goodRotation: {x: 0.08715574, y: 0, z: 0, w: 0.9961947}

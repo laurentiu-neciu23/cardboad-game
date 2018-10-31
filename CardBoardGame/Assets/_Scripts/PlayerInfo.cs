@@ -13,7 +13,7 @@ public class PlayerInfo : NetworkBehaviour
     public GameObject networkPlayerCard;
     public Vector3 goodScale = new Vector3(0.09f, 0.09f, 0.2f);
 
-    public GameObject playerCardToSpawn = null;
+
     // Use this for initialization
     void Start()
     {
@@ -23,14 +23,67 @@ public class PlayerInfo : NetworkBehaviour
 
         GenerateCards();
         SetDropZone();
+        Debug.Log(this.netId);
     }
+
+
     [Command]
-    public void CmdSpawnNetworkCard()
+    public void CmdSpawnCard(GameObject playerCardToSpawn)
     {
+        Debug.Log("execute");
+        Debug.Log(playerCardToSpawn);
+        NetworkServer.Spawn(playerCardToSpawn);
+    }
+
+
+    [Command]
+    public void CmdSpawnNetworkCard(string playerCardToSpawn, uint playerInfo)
+    {
+        Debug.Log("Please kill me");
         GameObject networkCardToSpawn = Instantiate(networkPlayerCard);
         NetworkCard nc = networkCardToSpawn.GetComponent<NetworkCard>();
-        nc.playerCard = playerCardToSpawn;
-        nc.player = this;
+
+        PlayerCard foundPc = null;
+
+        var playerInfos = GameObject.FindObjectsOfType<PlayerInfo>();
+
+
+        PlayerInfo player = null;
+        foreach (PlayerInfo p in playerInfos)
+        {
+            if (p.netId.Value == playerInfo)
+            {
+                player = p;
+            }
+        }
+
+        var playerCards =  player.GetComponent<PlayerInfo>().playerCardsInHand;
+        foreach (PlayerCard pc in playerCards) {
+            if (pc.PlayerName == playerCardToSpawn)
+            {
+                foundPc = pc;
+                break;
+            }
+
+        }
+
+
+        GameObject playerPref = Instantiate(playerCardPrefab);
+        var cd = playerPref.GetComponent<CardDisplay>();
+        cd.card = foundPc;
+
+
+
+       
+
+        Debug.Log(playerCardToSpawn);
+        Debug.Log(playerInfo);
+        nc.playerCard = playerPref;
+ 
+
+        nc.player = player.gameObject;
+
+        nc.typeOfCard = "m";
         NetworkServer.Spawn(networkCardToSpawn);
     }
 
@@ -40,6 +93,7 @@ public class PlayerInfo : NetworkBehaviour
         {
             GameObject go = GameObject.Find("WorldCanvas/Me_M_Panel");
             go.GetComponent<DropZone>().currentPlayer = this;
+
         }
     }
 
