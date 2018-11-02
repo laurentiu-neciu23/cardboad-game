@@ -26,55 +26,63 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         le.flexibleHeight = 0;
 
         placeholder.transform.SetSiblingIndex(this.transform.GetSiblingIndex());
-
-
         this.transform.SetParent(parentToReturn.parent);
-       
 
         GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
-    private GameObject getDropZone() {
-        return null;        
-    }
-
-
     public void OnDrag(PointerEventData eventData)
     {
-
-        GameObject dropZone = GameObject.Find("WorldCanvas/Me_M_Panel");
-
-
-        Image imageComponent = dropZone.GetComponent<Image>();
-        Color color = imageComponent.color;
-        color.a = 1.0f;
-        imageComponent.color = color;
+        GameObject dropZone = determineDropZone();
+        setColourAlpha(dropZone, 1);
         this.transform.position = eventData.position;
-
 
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        this.transform.SetParent(parentToReturn);
-        GetComponent<CanvasGroup>().blocksRaycasts = true;
-        if (transformData)
-        {
-            this.transform.localScale = goodScale;
-            this.transform.localEulerAngles = goodRotation;
-            Vector3 givenPosition = this.transform.localPosition;
-            givenPosition.z = 0;
-            this.transform.localPosition = givenPosition;
 
+        GameObject dropZone = determineDropZone();
+        setColourAlpha(dropZone, 0.3921f);
+        
+        if (parentToReturn == null)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            GetComponent<CanvasGroup>().blocksRaycasts = true;
+            Debug.Log("Return to hell");
+            this.transform.SetParent(parentToReturn.transform);
+        }    
+
+    }
+
+
+    private GameObject determineDropZone() {
+        GameObject dropZone = null;
+        string position = gameObject.GetComponent<CardDisplay>().card.position;
+
+        if (position == "M")
+        {
+            dropZone = GameObject.Find("WorldCanvas/Me_M_Panel");
+        }
+        else if (position == "F")
+        {
+            dropZone = GameObject.Find("WorldCanvas/Me_F_Panel");
+        }
+        else {
+            dropZone = GameObject.Find("WorldCanvas/Me_A_Panel");
         }
 
+        return dropZone;
+    }
 
-        GameObject dropZone = GameObject.Find("WorldCanvas/Me_M_Panel");
+    private void setColourAlpha(GameObject dropZone, float alpha) {
         Image imageComponent = dropZone.GetComponent<Image>();
         Color color = imageComponent.color;
-        color.a = 0.3921f;
+        color.a = alpha;
         imageComponent.color = color;
         Destroy(placeholder);
-        Destroy(this);
     }
 }

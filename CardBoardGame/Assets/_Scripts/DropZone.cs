@@ -17,6 +17,7 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
         if (pointerDrag != null) {
             currentPlayer.CmdSpawnNetworkCard(pointerDrag.GetComponent<CardDisplay>().Name.text, currentPlayer.netId.Value);
+            pointerDrag.GetComponent<Draggable>().parentToReturn = null;
         }
 
         

@@ -28,27 +28,25 @@ public class PlayerInfo : NetworkBehaviour
 
 
     [Command]
-    public void CmdSpawnCard(GameObject playerCardToSpawn)
+    public void CmdSpawnNetworkCard(string playerCardToSpawn, uint playerInfo)
     {
-        Debug.Log("execute");
-        Debug.Log(playerCardToSpawn);
-        NetworkServer.Spawn(playerCardToSpawn);
+        GameObject networkCard = Instantiate(networkPlayerCard);
+        NetworkServer.Spawn(networkCard);
+        RpcSetTypeToCard(networkCard, playerCardToSpawn, playerInfo);
+        setDataCorrectly(networkCard, playerCardToSpawn, playerInfo);
     }
 
 
-    [Command]
-    public void CmdSpawnNetworkCard(string playerCardToSpawn, uint playerInfo)
-    {
-        Debug.Log("Please kill me");
-        GameObject networkCardToSpawn = Instantiate(networkPlayerCard);
-        NetworkCard nc = networkCardToSpawn.GetComponent<NetworkCard>();
+    [ClientRpc]
+    private void RpcSetTypeToCard(GameObject networkCard, string playerCardToSpawn, uint playerInfo) {
+        setDataCorrectly(networkCard, playerCardToSpawn, playerInfo);
+    }
 
-        PlayerCard foundPc = null;
+    private void setDataCorrectly(GameObject networkCard, string playerCardToSpawn, uint playerInfo) {
 
-        var playerInfos = GameObject.FindObjectsOfType<PlayerInfo>();
-
-
+        NetworkCard nc = networkCard.GetComponent<NetworkCard>();
         PlayerInfo player = null;
+        var playerInfos = FindObjectsOfType<PlayerInfo>();
         foreach (PlayerInfo p in playerInfos)
         {
             if (p.netId.Value == playerInfo)
@@ -57,8 +55,10 @@ public class PlayerInfo : NetworkBehaviour
             }
         }
 
-        var playerCards =  player.GetComponent<PlayerInfo>().playerCardsInHand;
-        foreach (PlayerCard pc in playerCards) {
+        PlayerCard foundPc = null;
+        var playerCards = player.GetComponent<PlayerInfo>().playerCardsInHand;
+        foreach (PlayerCard pc in playerCards)
+        {
             if (pc.PlayerName == playerCardToSpawn)
             {
                 foundPc = pc;
@@ -66,34 +66,17 @@ public class PlayerInfo : NetworkBehaviour
             }
 
         }
-
-
-        GameObject playerPref = Instantiate(playerCardPrefab);
-        var cd = playerPref.GetComponent<CardDisplay>();
-        cd.card = foundPc;
-
-
-
-       
-
-        Debug.Log(playerCardToSpawn);
-        Debug.Log(playerInfo);
-        nc.playerCard = playerPref;
- 
-
+        nc.card = foundPc;
         nc.player = player.gameObject;
-
-        nc.typeOfCard = "m";
-        NetworkServer.Spawn(networkCardToSpawn);
     }
 
     private void SetDropZone()
     {
         if (isLocalPlayer)
         {
-            GameObject go = GameObject.Find("WorldCanvas/Me_M_Panel");
-            go.GetComponent<DropZone>().currentPlayer = this;
-
+            GameObject.Find("WorldCanvas/Me_M_Panel").GetComponent<DropZone>().currentPlayer = this;
+            GameObject.Find("WorldCanvas/Me_F_Panel").GetComponent<DropZone>().currentPlayer = this;
+            GameObject.Find("WorldCanvas/Me_A_Panel").GetComponent<DropZone>().currentPlayer = this;
         }
     }
 
@@ -106,15 +89,11 @@ public class PlayerInfo : NetworkBehaviour
         {
             asb = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "AssetBundles/cards"));
             playerCards = asb.LoadAllAssets<PlayerCard>();
-
         }
         catch (System.Exception e)
         {
             playerCards = Resources.FindObjectsOfTypeAll<PlayerCard>();
-
         }
-
-
         return playerCards;
     }
 

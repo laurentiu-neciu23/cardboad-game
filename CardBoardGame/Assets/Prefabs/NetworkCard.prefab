@@ -73,9 +73,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeOfCard: 
   player: {fileID: 0}
-  playerCard: {fileID: 0}
-  goodRotation: {x: 0.08715574, y: 0, z: 0, w: 0.9961947}
-  goodScale: {x: 0.16, y: 0.16, z: 0.2}
+  playerCardPrefab: {fileID: 1719653728530614, guid: 215ff2b360d59ec48aacee8469507096,
+    type: 2}
+  card: {fileID: 0}
 --- !u!224 &224360414144600204
 RectTransform:
   m_ObjectHideFlags: 1

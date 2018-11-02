@@ -6,69 +6,63 @@ public class NetworkCard : MonoBehaviour {
 
     public string typeOfCard;
     public GameObject player = null;
-    public GameObject playerCard = null;
-    public Quaternion goodRotation = Quaternion.Euler(0f, 0f, 0f);
-    public Vector3 goodScale = new Vector3(0.055f, 0.055f, 0.1f);
-
+    public GameObject playerCardPrefab = null;
+    public PlayerCard card= null;
+    
 
 	// Use this for initialization
 	void Start () {
+        Debug.Log("Spawning" + card.name);
         if (player == null)
             return;
 
         if (player.GetComponent<PlayerInfo>().isLocalPlayer) {
-            Debug.Log("Hello I am the player and I put card down birb");
-            GameObject parent = GameObject.Find("WorldCanvas/Me_M_Panel/Grid");
-            GameObject card = Instantiate(playerCard);
-
-            Destroy(playerCard);
-
-            card.transform.SetParent(parent.transform, false);
-            float canvasWidth = card.GetComponentsInChildren<RectTransform>()[1].sizeDelta.y;
-            float gridWitdth = card.GetComponent<RectTransform>().sizeDelta.y;
-
-            float prefferedScale = gridWitdth / canvasWidth;
-
-            card.transform.localScale = new Vector3(prefferedScale, prefferedScale, 1);
-            Destroy(card.GetComponent<Draggable>());
-
-            //correctlyPosition(card);
+            GameObject parent = determineDropZone("Me");
+            transformAccordingToGrid(parent);
         }
         else {
-            Debug.Log("Whatever not done yet");
-
-            GameObject parent = GameObject.Find("WorldCanvas/EnemyCardsDown");
-            GameObject card = Instantiate(playerCard);
-            card.transform.SetParent(parent.transform);
-            correctlyPosition(card);
-
+            GameObject parent = determineDropZone("Adv");
+            transformAccordingToGrid(parent);
         }
-        Destroy(this.gameObject);
+
    	}
 
-    private void setRayCastBlockingFalse(GameObject parent) {
-        CanvasGroup[] canvasGroups = parent.GetComponentsInParent<CanvasGroup>();
+    private GameObject determineDropZone(string prefix)
+    {
+        GameObject dropZone = null;
+        string position = card.position;
 
-        foreach (CanvasGroup canvas in canvasGroups) {
-            canvas.blocksRaycasts = true;
+        if (position == "M")
+        {
+            dropZone = GameObject.Find("WorldCanvas/" + prefix + "_M_Panel/Grid");
         }
-       
+        else if (position == "F")
+        {
+            dropZone = GameObject.Find("WorldCanvas/" + prefix + "_F_Panel/Grid");
+        }
+        else
+        {
+            dropZone = GameObject.Find("WorldCanvas/" + prefix + "_A_Panel/Grid");
+        }
 
+        return dropZone;
+    }
+
+    private void transformAccordingToGrid(GameObject parent) {
+
+        GameObject playerCard = Instantiate(playerCardPrefab);
+        playerCard.GetComponent<CardDisplay>().card = card;
+
+        playerCard.transform.SetParent(parent.transform, false);
+        float canvasWidth = playerCard.GetComponentsInChildren<RectTransform>()[1].sizeDelta.y;
+        float gridWitdth = playerCard.GetComponent<RectTransform>().sizeDelta.y;
+
+        float prefferedScale = gridWitdth / canvasWidth;
+
+        playerCard.transform.localScale = new Vector3(prefferedScale, prefferedScale, 1);
+        Destroy(playerCard.GetComponent<Draggable>());
 
     }
 
-    private void correctlyScaleToGrid(GameObject element, GameObject grid) {
 
-
-    }
-
-    private void correctlyPosition(GameObject card) {
-        Destroy(card.GetComponent<Draggable>());
-
-    }
-
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

@@ -2,25 +2,31 @@
 using UnityEditor;
 using UnityEngine.EventSystems;
 
-public class Zoomable : MonoBehaviour, IPointerClickHandler
-{
-    Vector3 goodPositon = new Vector3(0, 0, 0);
-    Vector3 goodScale = new Vector3(0.2f, 0.2f, 0.2f);
-    Quaternion goodRotation = Quaternion.Euler(0f, 0f, 0f);
+public class Zoomable : MonoBehaviour, IPointerClickHandler {
 
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.clickCount >= 2) {
+
+
+        if (eventData.clickCount >= 1) {
+            GameObject parent = GameObject.Find("CardPreview");
+            if (parent.transform.childCount != 0)
+            {
+                GameObject parentChild = parent.transform.GetChild(0).gameObject;
+                Destroy(parentChild);
+            }
             GameObject playerCardZoomed = Instantiate(this.gameObject);
-            GameObject parent = GameObject.Find("ScreenSpaceCanvas");
             playerCardZoomed.transform.SetParent(parent.transform);
-            playerCardZoomed.transform.localRotation = goodRotation;
-            playerCardZoomed.transform.localScale = goodScale;
-            playerCardZoomed.transform.localPosition = goodPositon;
+            playerCardZoomed.transform.localScale = new Vector3(0.25f, 0.27f, 1f);
+
+
          
             Destroy(playerCardZoomed.GetComponent<Zoomable>());
             playerCardZoomed.AddComponent<Hiddenable>();
         }
     }
+
+
+  
 }
