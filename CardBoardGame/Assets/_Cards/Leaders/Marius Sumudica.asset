@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6143bbc4b7fbafc44b43da32f95f074d, type: 3}
+  m_Name: Marius Sumudica
+  m_EditorClassIdentifier: 
+  Name: Marius Sumudica
+  Description: Antrenorul acesta a demonstrat ca echipele lui pot juca un fotbal spectacol.
+    Selectionata Braziliei vrea cu desavarsire titlul mondial luat intr-o maniera
+    categorica, distrugand defensivele adverse. Brazilienii s-au gandit ca "Sumi"
+    e omul care poate aduce din nou in prim-plan fotbalul cu zambetul pe buze.Ei nu
+    stiau insa ca si marii lor rivali, Argentina l-a convins pe antrenorul roman sa
+    le fie selectioner. "Sumi" e un profesionist, asa ca pentru a impaca si capra
+    si varza, a decis sa preia ambele posturi, dar si nationala statului Uruguai.
+    Adevarul e ca omului ii plac provocarile.
+  Forte: Spectacol (+2 at, -1 def)
+  artwork: {fileID: 21300000, guid: 2f0608e75e9a052439ef37fb9d5f1f98, type: 3}
+  ability: {fileID: 0}

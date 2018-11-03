@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6143bbc4b7fbafc44b43da32f95f074d, type: 3}
+  m_Name: Dan Petrescu
+  m_EditorClassIdentifier: 
+  Name: Dan Petrescu
+  Description: Fost mare jucator roman la Chelsea, cunoaste foarte bine fotbalul Britanic,
+    iar telul lui e sa antreneze candva echipa londoneza. Din pacate pentru el, va
+    fi doar selectioner al Angliei. Capabil sa organizeze defensiv orice echipa, Dan
+    Petrescu a fost cooptat pentru postul de selectioner al Germaniei dupa cateva
+    rezultate care au aratat ca echipa se confrunta cu mari probleme in acest compartiment.
+  Forte: Park the bus (+2 def)
+  artwork: {fileID: 21300000, guid: a0bee52949f689e44976484f1f30e1de, type: 3}
+  ability: {fileID: 0}

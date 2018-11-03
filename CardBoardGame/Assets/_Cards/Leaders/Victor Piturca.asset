@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6143bbc4b7fbafc44b43da32f95f074d, type: 3}
+  m_Name: Victor Piturca
+  m_EditorClassIdentifier: 
+  Name: Victor Piturca
+  Description: Candva cu rezultate foarte bune, Piturca a ajuns din intamplare la
+    carma selectionatei "Restul Tarilor". Daca acest fapt nu e un indicator al norocului,
+    lui "Piti" i-a fost comunicat ca va prelua si tarile Asiatice.De ce? Raspunsul
+    e ca nici dansul nu stie. Aparent, chit ca s-a lasat de jucat alba-neagra si a
+    promis ca se va axa mai mult pe cariera de antrenor, se pare ca experienta din
+    jocurile de noroc isi spune cuvantul si pe banca de antrenor.
+  Forte: Noroc (random [-2,+1] at, random [-1,+2] def )
+  artwork: {fileID: 21300000, guid: 9e8dc96b13e8f7a408ad21cc7de226d1, type: 3}
+  ability: {fileID: 0}

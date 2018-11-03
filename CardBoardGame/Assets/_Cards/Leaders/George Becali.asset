@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6143bbc4b7fbafc44b43da32f95f074d, type: 3}
+  m_Name: George Becali
+  m_EditorClassIdentifier: 
+  Name: George Becali
+  Description: Nu e antrenor? El crede ca da, iar cu puterea lui financiara si influenta
+    pe care o poseda, a pus mana pe pozitia de selectioner al nationalei Frantei.Scopul
+    lui nu e neaparat sa castige trofee. El vrea sa creasca jucatori pentru o provocare
+    adevarata, sa joace din toamna la FCSB. Domnul Becali e un filantrop adevarat,
+    asa ca a preluat nationala unita a Africii fara niciun ban.Le-a promis prime de
+    joc baietilor daca se tin de treaba.Daca nu, ii va vinde la Dinamo.
+  Forte: ' Moral (daca conduci -> +1 at, daca esti condus -> -1 at, -1 def)'
+  artwork: {fileID: 21300000, guid: 732fd0fb9af8a3f48983e158f3bfe3cd, type: 3}
+  ability: {fileID: 0}
