@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f73dfb9dab0b5c4e9e82177ec899042, type: 3}
+  m_Name: Gylfi Sigurdsson
+  m_EditorClassIdentifier: 
+  PlayerName: Gylfi Sigurdsson
+  AttackPoints: 7
+  DefensePoints: 2
+  Description: Un specialist al loviturilor libere. Nu vrem sa il laudam, deoarece
+    loviturile libere sunt singurul lucru la care se pricepe.
+  Team: Islanda
+  position: M
+  artwork: {fileID: 21300000, guid: c229787ddfcbc1e458dd633b9dd2cb78, type: 3}

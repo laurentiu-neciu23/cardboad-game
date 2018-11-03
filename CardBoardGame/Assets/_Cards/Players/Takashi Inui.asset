@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f73dfb9dab0b5c4e9e82177ec899042, type: 3}
+  m_Name: Takashi Inui
+  m_EditorClassIdentifier: 
+  PlayerName: Takashi Inui
+  AttackPoints: 5
+  DefensePoints: 2
+  Description: Nu l-am urmarit prea mult pe micul japonez, asa ca nu stim la ce sa
+    ne asteptam de la el. Ne vom lasa surprinsi!
+  Team: Japonia
+  position: A
+  artwork: {fileID: 21300000, guid: 5cc0d3220d84a61469ca766bb8ea111f, type: 3}
