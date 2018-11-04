@@ -34,15 +34,15 @@ public class NetworkCard : MonoBehaviour {
 
         if (position == "M")
         {
-            dropZone = GameObject.Find("WorldCanvas/" + prefix + "_M_Panel/Grid");
+            dropZone = GameObject.Find("WorldCanvas(Clone)/" + prefix + "_M_Panel/Grid");
         }
         else if (position == "F")
         {
-            dropZone = GameObject.Find("WorldCanvas/" + prefix + "_F_Panel/Grid");
+            dropZone = GameObject.Find("WorldCanvas(Clone)/" + prefix + "_F_Panel/Grid");
         }
         else
         {
-            dropZone = GameObject.Find("WorldCanvas/" + prefix + "_A_Panel/Grid");
+            dropZone = GameObject.Find("WorldCanvas(Clone)/" + prefix + "_A_Panel/Grid");
         }
 
         return dropZone;

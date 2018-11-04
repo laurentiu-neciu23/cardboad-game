@@ -65,14 +65,14 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
         if (position == "M")
         {
-            dropZone = GameObject.Find("WorldCanvas/Me_M_Panel");
+            dropZone = GameObject.Find("WorldCanvas(Clone)/Me_M_Panel");
         }
         else if (position == "F")
         {
-            dropZone = GameObject.Find("WorldCanvas/Me_F_Panel");
+            dropZone = GameObject.Find("WorldCanvas(Clone)/Me_F_Panel");
         }
         else {
-            dropZone = GameObject.Find("WorldCanvas/Me_A_Panel");
+            dropZone = GameObject.Find("WorldCanvas(Clone)/Me_A_Panel");
         }
 
         return dropZone;

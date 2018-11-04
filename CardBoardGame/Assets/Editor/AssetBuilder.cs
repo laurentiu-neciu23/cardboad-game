@@ -11,7 +11,7 @@ public class AssetBuilder :Editor {
 
         AssetBundleBuild[] buildMap = new AssetBundleBuild[1];
 
-        string path = "_Cards";
+        string path = "_Cards/Players";
         string[] Tdata = getAtPath<PlayerCard>(path);
 
         foreach (string data in Tdata) {
@@ -20,7 +20,7 @@ public class AssetBuilder :Editor {
         buildMap[0].assetBundleName = "cards";
         buildMap[0].assetNames = Tdata;
 
-        AssetBundleManifest manifest = BuildPipeline.BuildAssetBundles(@"C:\Unity\remote\cardboad-game\CardBoardGame\Assets\StreamingAssets\AssetBundles",
+        AssetBundleManifest manifest = BuildPipeline.BuildAssetBundles(@"C:\Unity\remoted_clone\cardboad-game\CardBoardGame\Assets\StreamingAssets\AssetBundles",
                                 buildMap,
                                 BuildAssetBundleOptions.ChunkBasedCompression,
                                 BuildTarget.StandaloneWindows64);

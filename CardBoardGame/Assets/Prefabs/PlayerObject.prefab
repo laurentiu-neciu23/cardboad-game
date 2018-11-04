@@ -53,12 +53,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCardsInHand: []
+  playerCards: []
+  leaderCards: []
+  specialCards: []
+  activableWorld: {fileID: 1879080396604164, guid: 697ec886e5083fe49a2306f0e6114c14,
+    type: 2}
   playerCardPrefab: {fileID: 1719653728530614, guid: 215ff2b360d59ec48aacee8469507096,
     type: 2}
   networkPlayerCard: {fileID: 1924555261690712, guid: cf0a27bb092a86149b62d836baaee0d8,
     type: 2}
   goodScale: {x: 0.09, y: 0.09, z: 0.2}
-  playerCardToSpawn: {fileID: 0}
 --- !u!114 &114951656904659276
 MonoBehaviour:
   m_ObjectHideFlags: 1

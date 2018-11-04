@@ -2,12 +2,14 @@
 using UnityEditor;
 using UnityEngine.EventSystems;
 
+
 public class Zoomable : MonoBehaviour, IPointerClickHandler {
+
+    public Vector3 localScale = new Vector3(0.25f, 0.27f, 1f);
 
 
     public void OnPointerClick(PointerEventData eventData)
     {
-
 
         if (eventData.clickCount >= 1) {
             GameObject parent = GameObject.Find("CardPreview");
@@ -18,8 +20,7 @@ public class Zoomable : MonoBehaviour, IPointerClickHandler {
             }
             GameObject playerCardZoomed = Instantiate(this.gameObject);
             playerCardZoomed.transform.SetParent(parent.transform);
-            playerCardZoomed.transform.localScale = new Vector3(0.25f, 0.27f, 1f);
-
+            playerCardZoomed.transform.localScale = localScale;
 
          
             Destroy(playerCardZoomed.GetComponent<Zoomable>());

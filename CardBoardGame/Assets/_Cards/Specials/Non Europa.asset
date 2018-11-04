@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Non Europa
   m_EditorClassIdentifier: 
   Name: Europe outsider
-  Description: -5p atac si -5p defensiva pentru jucatorii din echipa adversa care
+  Description: ropeniac si -5p defensiva pentru jucatorii din echipa adversa care
     nu sunt europeni
   artwork: {fileID: 21300000, guid: cd472c206bf81194e8825b0dd886a1d5, type: 3}
   ability: {fileID: 0}
