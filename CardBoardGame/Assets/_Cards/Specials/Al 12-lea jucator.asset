@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 060ecf54a43c7d04192abd329970302d, type: 3}
   m_Name: Al 12-lea jucator
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
-  artwork: {fileID: 0}
+  Name: Al 12-lea jucator
+  Description: +2p atac pentru fiecare jucator din echipa ta
+  artwork: {fileID: 21300000, guid: 03512dfb3806b374688dee200cf3a078, type: 3}
   ability: {fileID: 0}

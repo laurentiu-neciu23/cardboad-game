@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 060ecf54a43c7d04192abd329970302d, type: 3}
   m_Name: Antirabic
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
-  artwork: {fileID: 0}
+  Name: Antirabic
+  Description: '+7p spor de pericol, daca Suarez face parte din echipa adversa '
+  artwork: {fileID: 21300000, guid: 3265a393e6dfcef40bad6e163d16b6b4, type: 3}
   ability: {fileID: 0}

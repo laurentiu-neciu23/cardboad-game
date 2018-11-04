@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 060ecf54a43c7d04192abd329970302d, type: 3}
   m_Name: Cartonas galben
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
-  artwork: {fileID: 0}
+  Name: Cartonas galben
+  Description: Scade 2p din atacul si defensiva jucatorului
+  artwork: {fileID: 21300000, guid: 9f671d7408495924988b7074457e4078, type: 3}
   ability: {fileID: 0}

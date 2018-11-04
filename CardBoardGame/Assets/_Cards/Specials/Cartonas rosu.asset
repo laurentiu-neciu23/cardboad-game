@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 060ecf54a43c7d04192abd329970302d, type: 3}
   m_Name: Cartonas rosu
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
-  artwork: {fileID: 0}
+  Name: Cartonas rosu
+  Description: Elimina un adversar
+  artwork: {fileID: 21300000, guid: df6d89bf8a41fba41b5788d61c0b1d07, type: 3}
   ability: {fileID: 0}

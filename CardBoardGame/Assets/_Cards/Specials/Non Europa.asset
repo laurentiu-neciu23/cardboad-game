@@ -11,7 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 060ecf54a43c7d04192abd329970302d, type: 3}
   m_Name: Non Europa
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
-  artwork: {fileID: 0}
+  Name: Europe outsider
+  Description: -5p atac si -5p defensiva pentru jucatorii din echipa adversa care
+    nu sunt europeni
+  artwork: {fileID: 21300000, guid: cd472c206bf81194e8825b0dd886a1d5, type: 3}
   ability: {fileID: 0}

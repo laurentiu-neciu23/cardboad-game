@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 060ecf54a43c7d04192abd329970302d, type: 3}
   m_Name: Penalty
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
-  artwork: {fileID: 0}
+  Name: Penalty
+  Description: +5p echipei tale, -5p de la adversari
+  artwork: {fileID: 21300000, guid: bf2374dc8c2c8bc47a33939eab242a5c, type: 3}
   ability: {fileID: 0}
