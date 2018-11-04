@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Card", menuName = "Cards/Special Card")]
-abstract class SpecialCard: ScriptableObject
+class SpecialCard: ScriptableObject
 {
 
     public string Name;
