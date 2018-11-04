@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SelectionDropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
+public class LeaderSelectionDropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public PlayerInfo currentPlayer;
     public GameObject dropEffect;
-
     private void Update()
     {
-        if (GetComponentsInChildren<CardDisplay>().Length > 11 && currentPlayer != null) {
-            currentPlayer.TriggerFinishRoundPlayer();
+        if (GetComponentsInChildren<CardDisplayLeader>().Length == 1 &&  currentPlayer != null)
+        {
+            Debug.Log("Futamas" + GetComponentsInChildren<CardDisplayLeader>().Length);
+            currentPlayer.TriggerFinishLeaderRound();
 
         }
     }
@@ -22,11 +23,10 @@ public class SelectionDropZone : MonoBehaviour, IDropHandler, IPointerEnterHandl
 
         if (pointerDrag != null)
         {
-            pointerDrag.GetComponent<SelectionDraggable>().parentToReturn = this.gameObject.transform;
+            pointerDrag.GetComponent<LeaderSelectionDraggable>().parentToReturn = this.gameObject.transform;
             GameObject effect = Instantiate(dropEffect, transform.position, Quaternion.identity);
             effect.transform.SetParent(transform.parent);
             Destroy(effect, 3);
-
         }
 
 

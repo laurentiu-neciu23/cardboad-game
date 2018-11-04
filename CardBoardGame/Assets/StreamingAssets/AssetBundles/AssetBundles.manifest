@@ -1,7 +1,13 @@
 ManifestFileVersion: 0
-CRC: 297309981
+CRC: 3441989679
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: cards
+      Dependencies: {}
+    Info_1:
+      Name: leaders
+      Dependencies: {}
+    Info_2:
+      Name: specials
       Dependencies: {}

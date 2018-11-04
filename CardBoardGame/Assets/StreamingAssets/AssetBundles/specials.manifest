@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 2761971643
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1285ccc5e6d152623cc611601a3c76b1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 306c5970e276445245c48585a538ce1f
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 060ecf54a43c7d04192abd329970302d, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/_Cards/Specials/Holy moly.asset
+- Assets/_Cards/Specials/Penalty.asset
+- Assets/_Cards/Specials/Antirabic.asset
+- Assets/_Cards/Specials/Cartonas galben.asset
+- Assets/_Cards/Specials/Al 12-lea jucator.asset
+- Assets/_Cards/Specials/Surpriza.asset
+- Assets/_Cards/Specials/Cartonas rosu.asset
+- Assets/_Cards/Specials/Non Europa.asset
+Dependencies: []

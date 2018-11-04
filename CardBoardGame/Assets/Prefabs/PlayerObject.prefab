@@ -53,13 +53,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCardsInHand: []
+  leaderCardsInHand: []
+  specialCardsInHand: []
   playerCards: []
   leaderCards: []
   specialCards: []
   activableWorld: {fileID: 1879080396604164, guid: 697ec886e5083fe49a2306f0e6114c14,
     type: 2}
+  leaderSelectionCanvas: {fileID: 1702889133453188, guid: 846f3cd4cb8d2d84b95f6d8411342831,
+    type: 2}
+  specialSelectionCanvas: {fileID: 0}
   playerCardPrefab: {fileID: 1719653728530614, guid: 215ff2b360d59ec48aacee8469507096,
     type: 2}
+  leaderCardPrefab: {fileID: 1559647672963032, guid: b4b5c44afdb18c64ab2362d6ba8b31ec,
+    type: 2}
+  specialCardPrefab: {fileID: 0}
   networkPlayerCard: {fileID: 1924555261690712, guid: cf0a27bb092a86149b62d836baaee0d8,
     type: 2}
   goodScale: {x: 0.09, y: 0.09, z: 0.2}

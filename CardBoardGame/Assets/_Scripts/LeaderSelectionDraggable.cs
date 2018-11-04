@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SelectionDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class LeaderSelectionDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
 
     public Transform parentToReturn = null;
@@ -45,13 +45,12 @@ public class SelectionDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler
 
         GetComponent<CanvasGroup>().blocksRaycasts = true;
         this.transform.SetParent(parentToReturn.transform);
-
     }
 
 
     private GameObject determineDropZone()
     {
-        GameObject dropZone = GameObject.Find("SelectionCanvas/SelectionDropZone");
+        GameObject dropZone = GameObject.Find("LeaderSelection(Clone)/SelectionDropZone");
         return dropZone;
     }
 

@@ -26,6 +26,7 @@ public class CardDisplay : MonoBehaviour {
     [Header("Card info to be displayed:")]
     public PlayerCard card;
 
+
     // Use this for initialization
     void Start () {
         if(card.artwork!=null)

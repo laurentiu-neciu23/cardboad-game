@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+CRC: 4147683922
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 73e6ff2d3a2eb1626da375684a7457de
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 535534a0bd8d93ec982f8df13b412071
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6143bbc4b7fbafc44b43da32f95f074d, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/_Cards/Leaders/Victor Piturca.asset
+- Assets/_Cards/Leaders/Dan Petrescu.asset
+- Assets/_Cards/Leaders/Mircea Lucescu.asset
+- Assets/_Cards/Leaders/George Becali.asset
+- Assets/_Cards/Leaders/Marius Sumudica.asset
+- Assets/_Cards/Leaders/Ladislau Boloni.asset
+Dependencies: []

@@ -8,12 +8,18 @@ using UnityEngine.Networking;
 public class PlayerInfo : NetworkBehaviour
 { 
     public PlayerCard[] playerCardsInHand;
+    public LeaderCard[] leaderCardsInHand;
+    public SpecialCard[] specialCardsInHand;
     public PlayerCard[] playerCards = null;
     public LeaderCard[] leaderCards = null;
     public SpecialCard[] specialCards = null;
     public GameObject activableWorld;
+    public GameObject leaderSelectionCanvas;
+    public GameObject specialSelectionCanvas;
 
     public GameObject playerCardPrefab;
+    public GameObject leaderCardPrefab;
+    public GameObject specialCardPrefab;
     public GameObject networkPlayerCard;
     public Vector3 goodScale = new Vector3(0.09f, 0.09f, 0.2f);
     private int selectionRound = 0;
@@ -23,12 +29,19 @@ public class PlayerInfo : NetworkBehaviour
     void Start()
     {
         // Fetch all card assets
-        playerCardsInHand = fetchDataFromBundle();
+        playerCardsInHand = fetchDataFromBundle<PlayerCard>("AssetBundles/cards");
+        leaderCardsInHand = fetchDataFromBundle<LeaderCard>("AssetBundles/leaders");
+        Debug.Log(leaderCardsInHand.Length);
+        for (int i = 0; i < leaderCardsInHand.Length; i++) {
+            Debug.Log(leaderCardsInHand[i].name);
+        }
+        specialCardsInHand = fetchDataFromBundle<SpecialCard>("AssetBundles/specials");
         reshuffle(playerCardsInHand);
 
         if (isLocalPlayer)
         {
             GenerateCardsRoundPlayer();
+// GenerateCardsRoundSpecial();
         }
     }
 
@@ -96,6 +109,31 @@ public class PlayerInfo : NetworkBehaviour
 
         }
     }
+
+    private void GenerateCardsRoundLeader() {
+        Instantiate(leaderSelectionCanvas);
+        GameObject selectionCanvas = GameObject.Find("LeaderSelection(Clone)/SelectionGrid");
+        GameObject selectionDropZone = GameObject.Find("LeaderSelection(Clone)/SelectionDropZone");
+
+        selectionDropZone.GetComponent<LeaderSelectionDropZone>().currentPlayer = this;
+
+        for (int i = 0; i < 5; i++)
+        {
+
+            GameObject card = Instantiate(leaderCardPrefab);
+            card.AddComponent<LeaderSelectionDraggable>();
+            card.GetComponent<Zoomable>().localScale = new Vector3(0.7f, 0.7f, 1);
+            card.transform.SetParent(selectionCanvas.transform);
+            
+            card.transform.localScale = goodScale;
+            CardDisplayLeader cardDisplayComponent = card.GetComponent<CardDisplayLeader>();
+            cardDisplayComponent.card = leaderCardsInHand[i];
+            cardDisplayComponent.UpdateDisplay();
+
+        }
+
+    }
+
     public void TriggerFinishRoundPlayer() {
         playerCards = new PlayerCard[11];
         GameObject selectionCanvas = GameObject.Find("SelectionCanvas");
@@ -109,12 +147,26 @@ public class PlayerInfo : NetworkBehaviour
             playerCards[i] = Instantiate(selectedPlayerCards[i].card);
         }
         Destroy(selectionCanvas);
+        GenerateCardsRoundLeader();
+    }
+
+    public void TriggerFinishLeaderRound() {
+        leaderCards = new LeaderCard[1];
+        GameObject selectionCanvas = GameObject.Find("LeaderSelection(Clone)");
+        GameObject selectionDropZone = GameObject.Find("LeaderSelection(Clone)/SelectionDropZone");
+        CardDisplayLeader[] selectedPlayerCards = selectionDropZone.GetComponentsInChildren<CardDisplayLeader>();
+
+        Debug.Log(selectedPlayerCards.Length);
+
+        for (int i = 0; i < 1; i++)
+        {
+            leaderCards[i] = Instantiate(selectedPlayerCards[i].card);
+        }
+        Destroy(selectionCanvas);
         Instantiate(activableWorld);
 
         GenerateCards();
         SetDropZone();
-
-
     }
 
     private void SetDropZone()
@@ -128,18 +180,18 @@ public class PlayerInfo : NetworkBehaviour
     }
 
 
-    private PlayerCard[] fetchDataFromBundle() {
+    private T[] fetchDataFromBundle<T>(string location) where T: Object {
 
         AssetBundle asb = null;
-        PlayerCard[] playerCards = null;
+        T[] playerCards = null;
         try
         {
-            asb = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "AssetBundles/cards"));
-            playerCards = asb.LoadAllAssets<PlayerCard>();
+            asb = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, location));
+            playerCards = asb.LoadAllAssets<T>();
         }
         catch (System.Exception e)
         {
-            playerCards = Resources.FindObjectsOfTypeAll<PlayerCard>();
+            playerCards = Resources.FindObjectsOfTypeAll<T>();
         }
         return playerCards;
     }
